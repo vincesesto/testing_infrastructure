@@ -19,4 +19,4 @@ def test_system_os(host):
 def test_python_is_installed(host):
     python = host.package("python3")
     assert python.is_installed, "Python should be install on image"
-    assert python.version.startswith("2"), "Python should be version 2"
+    #assert python.version.startswith("2"), "Python should be version 2"
