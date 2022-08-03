@@ -19,9 +19,6 @@ jobs:
           # app-dir: ~/project/package-directory/  # If you're requirements.txt isn't in the root directory.
           # pip-dependency-file: test-requirements.txt 
       - run:
-          name: Install nginx
-          command: sudo deb https://nginx.org/packages/ubuntu/ focal nginx; sudo deb-src https://nginx.org/packages/ubuntu/ focal nginx; sudo apt-get update; sudo apt-get install -y nginx
-      - run:
           name: Run the dev test script
           command: ls -l; pwd; uname -a; py.test -v test_python_script.py
 
