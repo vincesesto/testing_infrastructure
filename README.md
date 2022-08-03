@@ -35,7 +35,6 @@ def test_system_os(host):
 def test_internet_access(host):
     google = host.addr("google.com")
     assert google.is_resolvable
-    assert google.is_resolvable
     
 def test_finding_ls(host):
     ls_command = host.find_command("ls")
