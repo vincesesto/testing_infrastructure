@@ -17,7 +17,7 @@ jobs:
           # pip-dependency-file: test-requirements.txt 
       - run:
           name: Run the dev test script
-          command: ls -l; pwd; ls -l /bin/chromedriver; python test_python_script.py
+          command: ls -l; pwd; ls -l /bin/chromedriver; python3 test_python_script.py
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
