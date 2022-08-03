@@ -5,9 +5,8 @@ import testinfra
 print("Testing Python")
 
 def test_passwd_file(host):
-    passwd = host.file("/etc/passwrd")
-    assert passwd.containes("root")
-
-host = testinfra.get_host("localhost")
-
-test_passwd_file(host)
+    passwd = host.file("/etc/passwd")
+    assert passwd.contains("root")
+    assert passwd.user == "root"
+    assert passwd.group == "root"
+    assert passwd.mode == 0o644
