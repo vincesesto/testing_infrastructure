@@ -67,6 +67,15 @@ def test_python_is_installed(host):
 - find_command - Return the path for a specific command
 - run - Run given commands and test against results
 
-
+## Connecting To Your Host
+- local
+- paramiko
+- docker
+- ssh
+- salt
+- ansible
+- kubectl
+- winrm
+- LXC/LXD
 
 
