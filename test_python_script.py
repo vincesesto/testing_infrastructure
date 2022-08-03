@@ -12,9 +12,9 @@ def test_passwd_file(host):
     assert passwd.mode == 0o644
     
 def test_system_os(host):
-    assert host.system_info.type == “linux”
-    assert host.system_info.distribution == “ubuntu”
-    assert host.system_info.release == “20.04”
+    assert host.system_info.type == "linux"
+    assert host.system_info.distribution == "ubuntu"
+    assert host.system_info.release == "20.04"
 
 def test_python_is_installed(host):
     python = host.package("python3")
