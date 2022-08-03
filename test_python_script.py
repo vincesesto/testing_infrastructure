@@ -10,8 +10,13 @@ def test_passwd_file(host):
     assert passwd.user == "root"
     assert passwd.group == "root"
     assert passwd.mode == 0o644
+    
+def test_system_os(host):
+    assert host.system_info.type == “linux”
+    assert host.system_info.distribution == “ubuntu”
+    assert host.system_info.release == “20.04”
 
 def test_python_is_installed(host):
     python = host.package("python3")
-    assert python.is_installed
-    assert python.version.startswith("2")
+    assert python.is_installed, "Python should be install on image"
+    assert python.version.startswith("2"), "Python should be version 2"
