@@ -51,7 +51,21 @@ def test_python_is_installed(host):
     #assert python.version.startswith("2"), "Python should be version 2"
 ```
 
-
+## Important Modules
+- addr - Test remote addresses
+- block_device - Test if a block device has been created
+- docker - Test if docker is running on system
+- file - Test various files attributes have been created
+- interface - Test if network interfaces exist(eth0)
+- package - Test the package status and version
+- pip - Test pip package manager and packages
+- process - Test process attributes
+- service  - Test services are available and status
+- sysctl - Test kernel parameters
+- system_info - Test for system specific information
+- user/group - Test if users or groups have been created
+- find_command - Return the path for a specific command
+- run - Run given commands and test against results
 
 
 
