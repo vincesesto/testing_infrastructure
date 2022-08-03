@@ -15,6 +15,13 @@ def test_system_os(host):
     assert host.system_info.type == "linux"
     assert host.system_info.distribution == "ubuntu"
     assert host.system_info.release == "20.04"
+    
+def test_internet_access(host):
+    google = host.addr("google.com")
+    assert google.is_resolvable
+    assert google.is_resolvable
+    
+   
 
 def test_python_is_installed(host):
     python = host.package("python3")
