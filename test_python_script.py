@@ -21,7 +21,13 @@ def test_internet_access(host):
     assert google.is_resolvable
     assert google.is_resolvable
     
-   
+def test_finding_ls(host):
+    ls_command = host.find_command("ls")
+    assert ls_command == "/usr/bin/ls"
+    
+def test_run_listing(host):
+    run_ls = host.run("ls -l /")
+    assert run_ls.succeeded
 
 def test_python_is_installed(host):
     python = host.package("python3")
