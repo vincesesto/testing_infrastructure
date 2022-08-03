@@ -78,4 +78,18 @@ def test_python_is_installed(host):
 - winrm
 - LXC/LXD
 
+```
+# Test on localhost
+py.test test_python_script.py
+
+# Test on docker container
+py.test --hosts='docker://<container_id_or_name>' test_python_script.py
+
+# Test via SSH to host
+py.test --ssh-config=/path/to/ssh_config --hosts='ssh://server' test_python_script.py
+
+# Test on Windows Server
+py.test --hosts='winrm://Administrator:Password@<host_ip_address>' test_python_script.py
+```
+
 
